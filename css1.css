@@ -59,6 +59,10 @@ body {
     font-size: 0.875rem;
 }
 
+.text-lg {
+    font-size: 1.125rem;
+}
+
 .font-medium {
     font-weight: 500;
 }
@@ -154,6 +158,23 @@ body {
 }
 
 .game-card img {
-    width: 150px;
+    width: 200px;
     height: auto;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem;
 }
