@@ -3,35 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GambleIt - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ultimate Gambling Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .content .card {
+            background-color: #282828;
+            width: 48%;
+            margin: 1%;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+        .content .card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .content .card h3 {
+            font-size: 1.5em;
+            margin: 10px 0 0;
+        }
+        .content .card p {
+            font-size: 1em;
+            margin: 10px 0 0;
+        }
+        footer {
+            background-color: #1e1e1e;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">GambleIt</div>
+        <h1>Welcome to Your Ultimate Gambling Experience</h1>
     </header>
-    <main>
-        <h1>Welcome to GambleIt</h1>
-        <div class="games">
-            <div class="game">
-                <h2>Slots</h2>
-                <button class="play-button">Play Now</button>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Games</a>
+        <a href="#">Promotions</a>
+        <a href="#">VIP</a>
+        <a href="#">Support</a>
+    </nav>
+    <div class="hero">
+        <h2>Experience the Thrill</h2>
+        <p>Join now and enjoy amazing promotions and bonuses!</p>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="card">
+                <img src="poker.jpg" alt="Poker">
+                <h3>Poker</h3>
+                <p>Play the best poker games online and win big!</p>
             </div>
-            <div class="game">
-                <h2>Poker</h2>
-                <button class="play-button">Play Now</button>
+            <div class="card">
+                <img src="roulette.jpg" alt="Roulette">
+                <h3>Roulette</h3>
+                <p>Spin the wheel and test your luck with our exciting roulette games!</p>
             </div>
-            <div class="game">
-                <h2>Blackjack</h2>
-                <button class="play-button">Play Now</button>
+            <div class="card">
+                <img src="slots.jpg" alt="Slots">
+                <h3>Slots</h3>
+                <p>Try your hand at our wide variety of slot machines and hit the jackpot!</p>
+            </div>
+            <div class="card">
+                <img src="blackjack.jpg" alt="Blackjack">
+                <h3>Blackjack</h3>
+                <p>Play blackjack and aim for 21 with our top-tier games.</p>
             </div>
         </div>
-    </main>
-    <nav class="bottom-nav">
-        <button class="nav-button" onclick="navigateTo('games')">Games</button>
-        <button class="nav-button" onclick="navigateTo('wallet')">Wallet</button>
-        <button class="nav-button" onclick="navigateTo('user')">User</button>
-    </nav>
-    <script src="index.js"></script>
+    </div>
+    <footer>
+        <p>&copy; 2024 Ultimate Gambling Experience. All rights reserved.</p>
+    </footer>
 </body>
 </html>
