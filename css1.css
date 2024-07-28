@@ -1,39 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gambling Co</title>
-    <link href="css1.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-900 text-white">
-    <div class="bg-black p-4 flex justify-between items-center">
-        <div class="flex items-center"></div>
-        <div class="flex items-center">
-            <a href="#wallet" class="flex items-center text-green-600 bg-gray-800 px-3 py-2 rounded-full text-lg font-medium">
-                0.00000
-            </a>
-        </div>
-        <div class="flex items-center"></div>
-    </div>
-    <div class="p-6">
-        <div class="flex flex-col items-center space-y-4">
-            <div class="game-card">
-                <img src="https://media.discordapp.net/attachments/1261779441974116452/1267093542803738728/2AD72EC0-588E-414A-AF8B-67F3D507CBD1.webp?ex=66a78852&is=66a636d2&hm=d7f222118ec06bb96c81df500f7424c156ca491eecbd1c70f19323f4c4af56a5&" alt="Game 1" class="rounded-md">
-                <button class="bg-yellow-500 text-black px-4 py-2 rounded-md font-semibold mt-2 w-full">Play</button>
-            </div>
-            <div class="game-card">
-                <img src="https://media.discordapp.net/attachments/1261779441974116452/1267095217014837278/2B813DC4-97FE-4B95-8E19-58D983531276.webp?ex=66a789e1&is=66a63861&hm=8e555e09427587472ef8062611b6d0090b3abe5c3baeaa2611e9763bba37e1d2&" alt="Game 2" class="rounded-md">
-                <button class="bg-yellow-500 text-black px-4 py-2 rounded-md font-semibold mt-2 w-full">Play</button>
-            </div>
-        </div>
-    </div>
-    <div class="fixed bottom-0 left-0 right-0 bg-black p-4 flex justify-around">
-        <a href="#home" class="text-gray-400 hover:text-white">HOME</a>
-        <a href="#wallet" class="text-gray-400 hover:text-white">WALLET</a>
-        <a href="#earn" class="text-gray-400 hover:text-white">EARN</a>
-        <a href="#profile" class="text-gray-400 hover:text-white">PROFILE</a>
-    </div>
-</body>
-</html>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.bg-green-600 {
+    background-color: #16a34a;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.bg-gray-700 {
+    background-color: #374151;
+}
+
+.w-10 {
+    width: 2.5rem;
+}
+
+.h-10 {
+    height: 2.5rem;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.bg-yellow-500 {
+    background-color: #f59e0b;
+}
+
+.text-black {
+    color: #000;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.rounded-md {
+    border-radius: 0.375rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+.hover\:text-white:hover {
+    color: #fff;
+}
+
+.game-card {
+    text-align: center;
+}
+
+.game-card img {
+    width: 150px;
+    height: auto;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem;
+}
