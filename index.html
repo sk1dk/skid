@@ -4,129 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucky Block Casino</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #1c1c1c;
-            color: #fff;
-        }
-        .header {
-            background-color: #000;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header .left {
-            display: flex;
-            align-items: center;
-        }
-        .header .left .logo {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-        .header .right {
-            display: flex;
-            align-items: center;
-        }
-        .header .right .balance {
-            display: flex;
-            align-items: center;
-            margin-right: 10px;
-        }
-        .header .right .balance span {
-            margin-left: 5px;
-        }
-        .header .right .profile {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background-color: #fff;
-            background-image: url('profile.jpg');
-            background-size: cover;
-        }
-        .main {
-            padding: 20px;
-        }
-        .main .title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .main .deposit {
-            background-color: #ffcc00;
-            color: #000;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .main .search {
-            margin-top: 20px;
-        }
-        .main .search input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-        }
-        .tabs {
-            margin-top: 30px;
-        }
-        .tabs .tab {
-            margin-bottom: 20px;
-        }
-        .tabs .tab .tab-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .tabs .tab .tab-content {
-            display: flex;
-            justify-content: space-between;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="header">
-        <div class="left">
-            <img src="back-arrow.png" alt="Back" class="logo">
-            <span>Lucky Block</span>
+<body class="bg-gray-900 text-white">
+    <div class="bg-black p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <button class="text-pink-500 font-bold">Close</button>
+            <h1 class="ml-4 text-xl font-semibold">Lucky Block</h1>
         </div>
-        <div class="right">
-            <div class="balance">
-                <img src="token.png" alt="Token" width="20" height="20">
-                <span>0.00000</span>
+        <div class="flex items-center">
+            <div class="flex items-center mr-4">
+                <span class="bg-green-600 px-2 py-1 rounded-full text-sm font-medium">0.00000</span>
             </div>
-            <div class="profile"></div>
+            <div class="w-10 h-10 rounded-full bg-gray-700"></div>
         </div>
     </div>
-    <div class="main">
-        <div class="title">LUCKY BLOCK CASINO</div>
-        <div>Your premium casino experience!</div>
-        <button class="deposit">DEPOSIT</button>
-        <div class="search">
-            <input type="text" placeholder="Search from +3000 games">
+    <div class="p-6">
+        <h2 class="text-2xl font-bold mb-4">LUCKY BLOCK CASINO</h2>
+        <p class="mb-4">Your premium casino experience!</p>
+        <button class="bg-yellow-500 text-black px-4 py-2 rounded-md font-semibold mb-4">DEPOSIT</button>
+        <div class="mb-4">
+            <input type="text" placeholder="Search from +3000 games" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700">
         </div>
-        <div class="tabs">
-            <div class="tab">
-                <div class="tab-title">Top Games</div>
-                <div class="tab-content"></div>
-            </div>
-            <div class="tab">
-                <div class="tab-title">New</div>
-                <div class="tab-content"></div>
-            </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-2">Top Games</h3>
+            <div class="border-t border-gray-700 pt-4"></div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-2">New</h3>
+            <div class="border-t border-gray-700 pt-4"></div>
         </div>
     </div>
-    <div class="footer">
-        <div class="nav">
-            <a href="#home">HOME</a>
-            <a href="#sports">SPORTS</a>
-            <a href="#wallet">WALLET</a>
-            <a href="#earn">EARN</a>
-            <a href="#profile">PROFILE</a>
-        </div>
+    <div class="fixed bottom-0 left-0 right-0 bg-black p-4 flex justify-around">
+        <a href="#home" class="text-gray-400 hover:text-white">HOME</a>
+        <a href="#sports" class="text-gray-400 hover:text-white">SPORTS</a>
+        <a href="#wallet" class="text-gray-400 hover:text-white">WALLET</a>
+        <a href="#earn" class="text-gray-400 hover:text-white">EARN</a>
+        <a href="#profile" class="text-gray-400 hover:text-white">PROFILE</a>
     </div>
 </body>
 </html>
