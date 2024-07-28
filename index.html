@@ -3,120 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gambling Front Page</title>
+    <title>Lucky Block Casino</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff;
+            background-color: #1c1c1c;
+            color: #fff;
         }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #1e1e1e;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        nav {
-            margin: 20px 0;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        .hero {
-            background-image: url('hero-image.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 2em;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
-        }
-        .content {
+        .header {
+            background-color: #000;
+            padding: 10px;
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
-            margin: 20px 0;
+            align-items: center;
         }
-        .content .card {
-            background-color: #282828;
-            width: 48%;
-            margin: 1%;
+        .header .left {
+            display: flex;
+            align-items: center;
+        }
+        .header .left .logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .header .right {
+            display: flex;
+            align-items: center;
+        }
+        .header .right .balance {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .header .right .balance span {
+            margin-left: 5px;
+        }
+        .header .right .profile {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #fff;
+            background-image: url('profile.jpg');
+            background-size: cover;
+        }
+        .main {
             padding: 20px;
-            box-sizing: border-box;
-            border-radius: 8px;
         }
-        .content .card img {
-            max-width: 100%;
-            border-radius: 8px;
+        .main .title {
+            font-size: 24px;
+            margin-bottom: 10px;
         }
-        .content .card h3 {
-            font-size: 1.5em;
-            margin: 10px 0 0;
+        .main .deposit {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .content .card p {
-            font-size: 1em;
-            margin: 10px 0 0;
+        .main .search {
+            margin-top: 20px;
         }
-        footer {
-            background-color: #1e1e1e;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 0.8em;
+        .main .search input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        .tabs {
+            margin-top: 30px;
+        }
+        .tabs .tab {
+            margin-bottom: 20px;
+        }
+        .tabs .tab .tab-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .tabs .tab .tab-content {
+            display: flex;
+            justify-content: space-between;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Your Ultimate Gambling Experience</h1>
-    </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Games</a>
-        <a href="#">Promotions</a>
-        <a href="#">VIP</a>
-        <a href="#">Support</a>
-    </nav>
-    <div class="hero">
-        <h2>The $1,000,000 Rank Up</h2>
-        <p>Learn More - 3d 13h 1m</p>
-    </div>
-    <div class="container">
-        <div class="content">
-            <div class="card">
-                <img src="mines.jpg" alt="Mines">
-                <h3>Mines</h3>
-                <p>Play Mines and test your luck!</p>
+    <div class="header">
+        <div class="left">
+            <img src="back-arrow.png" alt="Back" class="logo">
+            <span>Lucky Block</span>
+        </div>
+        <div class="right">
+            <div class="balance">
+                <img src="token.png" alt="Token" width="20" height="20">
+                <span>0.00000</span>
             </div>
-            <div class="card">
-                <img src="chicken.jpg" alt="Chicken Cross the Road">
-                <h3>Chicken Cross the Road</h3>
-                <p>Help the chicken cross the road and win big!</p>
+            <div class="profile"></div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="title">LUCKY BLOCK CASINO</div>
+        <div>Your premium casino experience!</div>
+        <button class="deposit">DEPOSIT</button>
+        <div class="search">
+            <input type="text" placeholder="Search from +3000 games">
+        </div>
+        <div class="tabs">
+            <div class="tab">
+                <div class="tab-title">Top Games</div>
+                <div class="tab-content"></div>
+            </div>
+            <div class="tab">
+                <div class="tab-title">New</div>
+                <div class="tab-content"></div>
             </div>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2024 Ultimate Gambling Experience. All rights reserved.</p>
-    </footer>
+    <div class="footer">
+        <div class="nav">
+            <a href="#home">HOME</a>
+            <a href="#sports">SPORTS</a>
+            <a href="#wallet">WALLET</a>
+            <a href="#earn">EARN</a>
+            <a href="#profile">PROFILE</a>
+        </div>
+    </div>
 </body>
 </html>
