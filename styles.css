@@ -11,12 +11,8 @@ body {
     text-align: center;
 }
 
-#flowerCanvas {
-    border: 1px solid #000;
-    background-color: #fff;
-}
-
 .footer-text {
-    margin-top: 20px;
     color: black;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
 }
