@@ -26,6 +26,7 @@ function initializeGrid() {
         grid.push(cell);
     }
     placeVehicles();
+    placeChicken();
 }
 
 function placeVehicles() {
@@ -34,6 +35,11 @@ function placeVehicles() {
         const index = Math.floor(Math.random() * gridSize * gridSize);
         grid[index].classList.add('vehicle');
     }
+}
+
+function placeChicken() {
+    const index = Math.floor(Math.random() * gridSize * gridSize);
+    grid[index].classList.add('chicken');
 }
 
 function getVehicleCount() {
@@ -50,6 +56,7 @@ function onCellClick(event) {
     const index = parseInt(event.target.dataset.index, 10);
     if (grid[index].classList.contains('vehicle')) {
         alert('Game Over! You hit a vehicle.');
+        resetGame();
     } else {
         multiplier += 1;
         event.target.style.backgroundColor = '#fff';
