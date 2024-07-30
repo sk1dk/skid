@@ -1,76 +1,41 @@
-document.getElementById('start-button').addEventListener('click', startGame);
-document.getElementById('cashout-button').addEventListener('click', cashOut);
-
-const gridSize = 5;
-let multiplier = 1;
-let betAmount = 0;
-let difficulty = 'easy';
-let grid = [];
-
-function startGame() {
-    betAmount = parseFloat(document.getElementById('bet-amount').value);
-    difficulty = document.getElementById('difficulty').value;
-    initializeGrid();
-}
-
-function initializeGrid() {
-    grid = [];
-    const gridElement = document.getElementById('grid');
-    gridElement.innerHTML = '';
-    for (let i = 0; i < gridSize * gridSize; i++) {
-        const cell = document.createElement('div');
-        cell.classList.add('cell');
-        cell.dataset.index = i;
-        cell.addEventListener('click', onCellClick);
-        gridElement.appendChild(cell);
-        grid.push(cell);
+const config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    backgroundColor: '#ffffff',
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
     }
-    placeVehicles();
-    placeChicken();
+};
+
+const game = new Phaser.Game(config);
+
+let player;
+const playerSpeed = 200;
+
+function preload() {
+    this.load.image('player', 'https://media.discordapp.net/attachments/1147972308917555401/1267649292051550241/IMG_5718.png?ex=66a98de7&is=66a83c67&hm=0defb2fa76b4cdd1495aa962ed67414809c8299c63b36436270561c2e8a1f2fc&'); // Add the path to your player image
 }
 
-function placeVehicles() {
-    const vehicleCount = getVehicleCount();
-    for (let i = 0; i < vehicleCount; i++) {
-        const index = Math.floor(Math.random() * gridSize * gridSize);
-        grid[index].classList.add('vehicle');
+function create() {
+    player = this.physics.add.sprite(400, 300, 'player');
+    this.cursors = this.input.keyboard.createCursorKeys();
+}
+
+function update() {
+    player.setVelocity(0);
+
+    if (this.cursors.left.isDown) {
+        player.setVelocityX(-playerSpeed);
+    } else if (this.cursors.right.isDown) {
+        player.setVelocityX(playerSpeed);
     }
-}
 
-function placeChicken() {
-    const index = Math.floor(Math.random() * gridSize * gridSize);
-    grid[index].classList.add('chicken');
-}
-
-function getVehicleCount() {
-    switch (difficulty) {
-        case 'easy': return Math.floor(gridSize * 0.1);
-        case 'medium': return Math.floor(gridSize * 0.2);
-        case 'hard': return Math.floor(gridSize * 0.3);
-        case 'daredevil': return Math.floor(gridSize * 0.4);
-        default: return Math.floor(gridSize * 0.1);
+    if (this.cursors.up.isDown) {
+        player.setVelocityY(-playerSpeed);
+    } else if (this.cursors.down.isDown) {
+        player.setVelocityY(playerSpeed);
     }
-}
-
-function onCellClick(event) {
-    const index = parseInt(event.target.dataset.index, 10);
-    if (grid[index].classList.contains('vehicle')) {
-        alert('Game Over! You hit a vehicle.');
-        resetGame();
-    } else {
-        multiplier += 1;
-        event.target.style.backgroundColor = '#fff';
-    }
-}
-
-function cashOut() {
-    alert(`You cashed out with a multiplier of ${multiplier}. Total winnings: ${betAmount * multiplier}`);
-    resetGame();
-}
-
-function resetGame() {
-    multiplier = 1;
-    betAmount = 0;
-    document.getElementById('bet-amount').value = '';
-    initializeGrid();
 }
