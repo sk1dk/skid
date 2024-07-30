@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinosaur Game</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        #gameCanvas {
+            border: 1px solid #000;
+            background-color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <div id="game-container">
-        <canvas id="gameCanvas" width="800" height="200"></canvas>
-        <button id="startBtn">Start Game</button>
-    </div>
-    <script src="script.js"></script>
+    <canvas id="gameCanvas" width="800" height="200"></canvas>
+    <script src="game.js"></script>
 </body>
 </html>
