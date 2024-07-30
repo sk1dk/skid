@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zura's Garden</title>
+    <title>Mission Uncrossable</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <p class="footer-text">With love, by Zura</p>
-        <h1>Currently under construction</h1>
+    <div id="game-container">
+        <div id="controls">
+            <input type="number" id="bet-amount" placeholder="Enter Bet Amount">
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="daredevil">Daredevil</option>
+            </select>
+            <button id="start-button">Start Game</button>
+            <button id="cashout-button">Cash Out</button>
+        </div>
+        <div id="grid"></div>
     </div>
+    <script src="game.js"></script>
 </body>
 </html>
