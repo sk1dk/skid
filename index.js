@@ -1,7 +1,7 @@
 document.getElementById('start-button').addEventListener('click', startGame);
 document.getElementById('cashout-button').addEventListener('click', cashOut);
 
-const gridSize = 10;
+const gridSize = 5;
 let multiplier = 1;
 let betAmount = 0;
 let difficulty = 'easy';
