@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
         cell.addEventListener('click', () => {
             const index = parseInt(cell.dataset.index);
             if (bombPositions.has(index)) {
-                cell.innerHTML = `<img src="${bombImage}" alt="Bomb" class="w-full h-full">`;
+                cell.innerHTML = `<img src="${bombImage}" alt="Bomb">`;
                 cell.classList.add('bg-red-600');
                 // Game over logic here
                 alert('Game Over!');
                 revealBombs();
             } else {
-                cell.innerHTML = `<img src="${diamondImage}" alt="Diamond" class="w-full h-full">`;
+                cell.innerHTML = `<img src="${diamondImage}" alt="Diamond">`;
                 cell.classList.add('bg-green-600');
             }
             cell.removeEventListener('click', arguments.callee);
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         bombPositions.forEach(index => {
             const cell = cells[index];
             if (!cell.innerHTML) {
-                cell.innerHTML = `<img src="${bombImage}" alt="Bomb" class="w-full h-full">`;
+                cell.innerHTML = `<img src="${bombImage}" alt="Bomb">`;
                 cell.classList.add('bg-red-600');
             }
         });
