@@ -3,93 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Server Listing</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Dinosaur Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="bg-primary text-white">
-        <div class="container d-flex justify-content-between align-items-center py-3">
-            <a href="#" class="logo text-white h4 mb-0">Discadia</a>
-            <nav>
-                <button class="btn btn-outline-light">
-                    <img src="https://media.discordapp.net/attachments/1243916165961486376/1267797649701208167/IMG_5742.png" alt="Menu" class="menu-icon">
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero bg-dark text-white py-5">
-        <div class="container text-center">
-            <h1>Discord Servers</h1>
-            <p>Find Discord servers and make new friends!</p>
-            <button class="btn btn-success my-3 rounded-pill">Add Your Server</button>
-            <div class="btn-group mb-3" role="group">
-                <button type="button" class="btn btn-secondary rounded-pill">Top</button>
-                <button type="button" class="btn btn-secondary rounded-pill">Active</button>
-                <button type="button" class="btn btn-secondary rounded-pill">Members</button>
-            </div>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control rounded-pill" placeholder="Search for...">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-light rounded-pill" type="button">Search</button>
-                </div>
-            </div>
-            <div class="tags">
-                <button class="btn btn-outline-light m-1 rounded-pill">gaming</button>
-                <button class="btn btn-outline-light m-1 rounded-pill">community</button>
-                <button class="btn btn-outline-light m-1 rounded-pill">anime</button>
-                <button class="btn btn-outline-light m-1 rounded-pill">fun</button>
-                <button class="btn btn-outline-light m-1 rounded-pill">chill</button>
-                <button class="btn btn-outline-light m-1 rounded-pill">minecraft</button>
-                <button class="btn btn-outline-light m-1 rounded-pill">roblox</button>
-                <!-- Add more tags as needed -->
-            </div>
-        </div>
-    </section>
-
-    <section class="popular-servers py-5">
-        <div class="container">
-            <div class="card mb-3 rounded-pill">
-                <div class="card-body">
-                    <h5 class="card-title">Purple Prison - Minecraft Server</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Sponsor</h6>
-                    <p class="card-text">INVITE LINK: discord.gg/pp</p>
-                    <p class="card-text">We are a Strong Minecraft Discord Server Community since 2014! With Huge YouTubers having Played such as...</p>
-                </div>
-            </div>
-            <!-- Repeat for other servers -->
-        </div>
-    </section>
-
-    <footer class="bg-primary text-white py-4">
-        <div class="container text-center">
-            <div class="footer-links mb-3">
-                <a href="#" class="text-white">Home</a>
-                <a href="#" class="text-white">Server Listings</a>
-                <a href="#" class="text-white">Categories</a>
-                <a href="#" class="text-white">About Us</a>
-                <a href="#" class="text-white">FAQ</a>
-                <a href="#" class="text-white">Contact</a>
-            </div>
-            <div class="social-media-icons mb-3">
-                <a href="#"><img src="https://via.placeholder.com/50" alt="Twitter"></a>
-                <a href="#"><img src="https://via.placeholder.com/50" alt="Facebook"></a>
-                <a href="#"><img src="https://via.placeholder.com/50" alt="Discord"></a>
-            </div>
-            <div class="contact-info mb-3">
-                <p>Email: support@discordlisting.com</p>
-                <p>Phone: (123) 456-7890</p>
-            </div>
-            <div class="legal-links">
-                <a href="#" class="text-white">Privacy Policy</a>
-                <a href="#" class="text-white">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="200"></canvas>
+        <button id="startBtn">Start Game</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
