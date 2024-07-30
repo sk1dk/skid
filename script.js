@@ -2,7 +2,7 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 const dinoImg = new Image();
-dinoImg.src = 'IMG_5747.png';
+dinoImg.src = 'https://zuraai.lol/IMG_5747.png';
 
 let dino = {
     x: 50,
